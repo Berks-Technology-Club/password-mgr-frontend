@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,44 @@
     <title>Password manager</title>
 </head>
 <body>
-    
+
+
+    <style>
+        .loginForm {
+           display: flex;
+           flex-direction: column;
+           max-width: 300px;
+
+        }
+        .formLoginDiv{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .inputSpacing{
+            margin-bottom: 10px;
+
+        }
+    </style>
+
+<div class="formLoginDiv">
+       <div class="loginForm">
+    <h1> Login</h1>
+
+<input class="inputSpacing" type="text" name="username" id="Username" placeholder="Username">
+<input class="inputSpacing" type="password" name="password" id="Password" placeholder="Password">
+
+<button onclick="loginButton()">Login</button>
+
+    </div> 
+</div>
+
+<script>
+    function loginButton(){
+        username = document.querySelector("#Username").value
+        password = document.querySelector("#Password").value
+        console.log(username, password)
+    }
+</script>
 </body>
 </html>
